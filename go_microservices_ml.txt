@@ -4,4 +4,4 @@ speaker wants to add data processing as a use case for Go
 
 apply ML to cellular virtual straining. Want to do image anomaly detection.
 
-
+watch the talk because there were LOTS of lessons learned from lots of complications - including needing to be able to install on Windows (including Win11)
