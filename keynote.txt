@@ -21,7 +21,36 @@ other examples including removing support for insecure systmes
 
 Data-driven decisions
 ---------------------
+"consensus is more likely when the poeple look at the same problem with the same information"
+
+where do we get the data?
+
+talking ot users - go user survey, in-editor surveys, research interviews and user exp studies
+
+they also do open-source code analysis. They look at the go modules that have been published. 
+
+however, these data come from very small number of folks. Sampling helps. 
 
 
 Go toolchain telemetry (opt-in)
 -------------------------------
+telemetry will be a small amount of go usage, but it will give the Go devs different data.
+
+It will be voluntary and opt-in
+
+they want usage information and breakage informatoin
+
+usage - eg who is using features they are considering removing?
+
+breakage - eg the Mac build system bug
+
+Go compiler doesn't stop at the first error. It tries to find them all so that you can fix them all at once before trying to compile again.
+
+Conclusions
+------------
+
+- Go needs to change over time
+- go changes aim for better software engr
+- data is critical to reaching consenus
+- telemetry tiwll be an ipmortant data source
+
