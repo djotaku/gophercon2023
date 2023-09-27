@@ -36,11 +36,27 @@ Paragraph Structure
 ---------------------
 function defs in Go can be read as clear first sentences in a paragraph
 
+eg
+func (t *theThing) Reads (book *Book) (knowledge, err) {}
+
+would read as: T reads the book and learns new knowledge
+
 "the name of a method's receive should be a relfectio nof its identity. Don't use genetic names such as "me", "this", or "self" idenfitfiers typical of object-oriented languages" - Go Code Review Comments
 
+Single Use Variables fragment a paragraph; analyze your code to see if you can remove them.
 
+t:= time.Now()
+conf, err := c.Query(t)
+
+reads as The time is Sept 27th. We had Gophercon at the time.
+
+should change to:
+
+conf, err += c.Query(time.Now()) We had Gophercon on Sept 27th.
 
 
 Supporting characters
 ----------------------
+see slides
+
 
