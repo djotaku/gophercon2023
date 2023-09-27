@@ -1,0 +1,46 @@
+Idiomatic Go Tells a story
+
+kaylyn@lterra.space
+
+purpose of talk - how to use the art of storytelling to improve your code
+
+a model - your code logic pulls from models and utils
+
+"Avoid meaningless package names like util, common, misc, api, types, and interfaces" - Go Code Review Comments
+
+In go we want each of our packages to be complete and tell a whole story. It should be horizontal (see the slides when posted - really makes more sense)
+
+In their talk they will have 3 packages - main story and 2 x supporting story
+
+Story Outline
+-------------
+see slide - it shows how a Go idiomatic codebase will match with the story outline. Very interesting.
+
+"If you're in a packag eaccounts you don't need a typ eAccountsFile. Which clients will write as accounts.AccountsFile. Instead name the type File, which clients iwll write as accounts.File." - Go Code Review commments
+
+Main Characters
+---------------
+these are the types you definte in your package, taking action throughout your code
+
+Template: world.Noun.Verb
+
+eg 
+accounts.File
+accounts.File.Read
+accounts.Stream
+accounts.Stream.Write
+
+Do not instorduce characters that are not neede duntil they are needed.
+
+Paragraph Structure
+---------------------
+function defs in Go can be read as clear first sentences in a paragraph
+
+"the name of a method's receive should be a relfectio nof its identity. Don't use genetic names such as "me", "this", or "self" idenfitfiers typical of object-oriented languages" - Go Code Review Comments
+
+
+
+
+Supporting characters
+----------------------
+
