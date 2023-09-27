@@ -95,6 +95,14 @@ design the architecture, name the components, document the detalis - ask youself
 
 documentation is for users - track your accomplishments and praise
 
+don't panic - builda good network of friends and fam
+
+================================
+
+Freeze - a meeting muter with a twist
+
+bluetooth gradget in tinygo
+
 
 
 

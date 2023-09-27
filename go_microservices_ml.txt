@@ -1,0 +1,7 @@
+Go Microservices for ML at the Edge
+
+speaker wants to add data processing as a use case for Go
+
+apply ML to cellular virtual straining. Want to do image anomaly detection.
+
+
