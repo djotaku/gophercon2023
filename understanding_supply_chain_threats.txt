@@ -1,0 +1,69 @@
+Understanding Supply Chain Threats with static analysis
+
+problems in open source security
+---------------------------------
+
+600% increase in software supply chain attacks in 2022 vs 2021
+
+in general Go has a more secure ecoystem than other languages
+- has well-defined standard lib - you don't need to rely on 3rd party packages
+- consistent package mgmt system - 
+- easy to read/write - harder to write bugs
+- great tooling for code analysis - 
+- mem safety
+- great community and security culture
+
+for any package - does it do what it claims to do? Will it *continue* to be trustworthy? What about the dependencies in this package?
+
+common dep issues - overly broad permissions, malicious updates, malicious packages
+
+overly broad perms example - log4j
+
+malicious package eg - see slides
+
+malicious updates are extra bad because a package you audited and trust is no longer trustworthy. Also might be a transitive dep (not one of your direct deps)
+
+Solution of checking all code and deps is not scalable.
+
+capability analysis
+--------------------
+
+A way of understanding what your deps do without having to audit it manually
+
+capabilities are permissions, not vulnerabilities
+
+So you want principle of least capability
+
+We can to make package capbilities explicit and inform devs when those have changed
+
+see slide for list of types of capabilities
+
+std lib cals interact with the system in certain ways and those are the types of capabilities
+
+eg network, files, system, cgo, unsafe
+
+caveats
+- only lets us detect a superset of package's capabilities
+- mem safe violations could be used by bad actors to avoid being detected
+- doesn't detect - logic errors, bugs, vulns
+
+
+the capslock analyzer
+---------------------
+
+CLI and lib for analyzing package capabilities
+
+Goal: app permissions model, but fo rpackage imports
+
+see slide on how to run it
+
+output tells the caps and how many calls for each capability
+
+You can also get the call paths to understand what's using which capability
+
+Has JSON output for analysis and automatoin
+
+next steps: integrate cap into package odcumentation sites (eg deps.dev) and OpenSSF Scorecards in Github
+
+Also, could they automate capability restriction
+
