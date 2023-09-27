@@ -1,3 +1,100 @@
 Lightning Talks (Wed)
 
+Can ChatGPT do my job?
+
+first pass result from ChatGPT was OK.
+
+it was helpful to get a little bit started. But it requires a LOT of back and forth with the speaker.
+
+can be a powerful helper , but cannot be trusted to write good code. Can reintroduce problems that you already asked it to remove
+
+==========================
+
+Tis But a Scratch
+
+Shrinking container images usein FROM scratch
+
+they will be faster to ship and more secure
+
+using alpine ended up with 298MB image
+
+because Go is compiling to a binary, we don't need to bring an OS along. It can just run off the host kernel.
+
+see slide to see how they use first alpine and then scratch to get 6.72MB image size
+
+because no OS - malicous actor can't open a shell
+
+you don't need to worry about keeping an OS up to date
+
+if you need just a bit more, you might want to use distroless image instead of scratch - includes CA certs, tzdata, and a few more things
+
+
+========================
+
+State of the Art in Randomness
+
+math/rand v2 will have multiple sources avialable
+
+uniformity - do we have statistical quality; 
+
+unpredictability - used for security; chacha20 is the state of the art
+
+efficiency - speed and size; many state of the art algorithms
+
+==========================
+
+Cognitive Load and Go
+
+reduced cognitive load can lead to less issues with bugs
+
+shows how, wihout type hints, there's actually a high cognitive load in Python compared to Go
+
+"understranding what types of information variables hold is key to being abl eto reason about making changes to code. If you don't understand what the variable is supposed to represent, thinking aobut the code will be hard"
+
+60% of dev time is spent reading and understanding code
+
+You eventually have to "pay the piper" on types
+
+"If you've chosen the right data structure, the algorithms are self-evident. data structures, not algorithms are central to programming"
+
+===============================
+
+A supply chain issue lurking in your API
+
+issues:
+- typosquatting
+- phishing of maintainers
+- the code you see on Github is not necessarily what you get
+- weaponized dependencies
+
+crypto/rsa package supply chain attack
+
+nil error means things worked (from me: weird!!)
+
+you can poison the package by changing the global variable in that package
+
+see demo package the speaker has made
+
+=================================
+
+Go Proverbs to Overcome Imposter Syndrome
+
+go-proverbs.github.io
+
+don't communicate by sharing memory, share memory by communicating - talk to others about what you're working on so you can celebrate together
+
+clear is better than clever - you might not have all the fancy words to talk about how you feel, but you can still talk about it
+
+reflection is never clear - hard to see the ways we've improved
+
+errors are values - failure is necessary for growth. don't make perfection the goal
+
+don't just check errors, handle them gracefully - give yourself time and space to learn from errors
+
+design the architecture, name the components, document the detalis - ask youself how you might support a friend who minimizes their accomplishments
+
+documentation is for users - track your accomplishments and praise
+
+
+
 
