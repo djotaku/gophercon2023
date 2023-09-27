@@ -1,0 +1,15 @@
+Everything you alwawy wanted to know abou ttype inference
+
+type inference is the ability toe automaticlaly deduce the type of an expression at compile time....without explicit type annotations
+
+it's already done in go from what's on the righthand side of the equals sign
+
+it's good for removing repetition
+
+with generics in Go, there can be many more types.
+
+(don't be dogmatic - if it makes the code easier to read - use them)
+
+Type inference can be seen as solving Type equations
+
+
