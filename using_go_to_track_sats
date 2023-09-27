@@ -1,3 +1,21 @@
 Using Go to Track Satellites in the Sky
 
+social pmconseco
+
+citizen science
+
+there are 8100 active sat orbiting earth
+
+comms are usually unencrypted
+
+Cna use the Go-Satellite lib
+
+github.com/joshuaferrara/go-satellite
+
+Port of SGP4
+
+provides sat tls and other stuff
+
+see Go code in the talk notes
+
 
