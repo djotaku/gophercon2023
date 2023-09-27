@@ -1,0 +1,27 @@
+Wed keynote - Go Changes
+Rus Cox
+
+Go has to change because it has to adapt. 
+
+Talk is about how change is decided for the language.
+
+Changes they want
+-----------------
+It's all based on the goal - "better software engineering at scale"
+
+"software engineering is what happens to programming when you add time and other programmers"
+
+the go goal is why it had testing built in from the beginning
+
+gofmt - avoids spuroius diffs just because you disagree on formatting.
+
+Unambiguous import paths - make for better software engineering when there's a package name collision
+
+other examples including removing support for insecure systmes
+
+Data-driven decisions
+---------------------
+
+
+Go toolchain telemetry (opt-in)
+-------------------------------
