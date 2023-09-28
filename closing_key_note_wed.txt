@@ -12,4 +12,6 @@ with generics in Go, there can be many more types.
 
 Type inference can be seen as solving Type equations
 
+In Go 1.21 type inference is much more powerful
+
 
