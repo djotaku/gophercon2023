@@ -1,0 +1,23 @@
+A Witch's Guide to Go: 3 Charms to Ehance your Software
+
+inspired by question: "is what we do so straightforward that it cna be replicated by generative AI?"
+
+speaker is builder of NLP apps, LLMs, and distributed systems
+
+one
+"if a module hides information we increase the funcitonaliy provided while reducing its interface. This makes the module deeper"
+
+two
+"define errors out of existence"
+
+In Go we rely on errors for contorl flow, but this makes their interpretation tricky; distributed tracing is hard.
+
+could we get compound errors to help tell a better story
+
+three
+"code is most obvious if it conforms to the conventions that readers will be expecting."
+
+Enchantment Charms
+- creativity - see one above
+- hope - take a holistic view of distributed tracing with errors that communicate
+- empathy - deliver go-flavored features to your users who use languages other than Go
