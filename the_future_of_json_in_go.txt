@@ -1,0 +1,69 @@
+The Future of JSON in Go
+
+this has been a multi-year effort
+
+JSON datatypes correlate to Go types (see slide)
+
+encoding/json package used to Marshal and Unmarshal data into Go structs
+
+it's the #5 most imported Go package - even over net/http, os, errors, and strconv
+
+What's bad with encoding/json v1?
+
+1. missing functionality
+
+92 open requests on the GH repo
+
+2. api deficiencies
+
+these can't be fixed w/o making a breaking chance
+
+options cannot be passed to Marshal or Unmarshal
+
+no easy way to unmarshal from an io.Reader
+
+compact, indent, and htmlescape have limitations
+
+3. performance limitations
+
+the methods perform poorly
+
+mashalljson always allocates
+
+they also force a second parse - On^2 runtime may be experienced
+
+this (On^2) has caused issues w/ kubernetes in the real world
+
+4. behavioral flaws
+
+methods are inconsistently called depending on whether the underlying Go value is addressable
+
+unmarshalling allows for invalid UTF-8 (violates JSOn standard)
+
+unmarshallling allow for duplicate names in JSON object - which can be a security issue
+
+uses case-insentive match to match struct names - a security vuln.
+
+see slides for priv esc using duplicate names
+
+draft design for v2 (not a formal proposal)
+==============================================
+
+(see slide)
+
+their idea for jasontext package makes it smaller which is good for TinyGo
+
+they have byte slices, io writers and readers ,and jsontext
+
+there will be easier ability to set options
+
+Looks like v2 will call v1 with options - to preserve compat?
+
+omitempty - is more about the JSON representation of types
+
+omitzero - omits a Go struct field that is the zero Go value or possesses an IsZero method that reports true
+
+inline - JSOn equiv of Go struct embedding
+
+
+
