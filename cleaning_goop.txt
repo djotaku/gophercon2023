@@ -1,0 +1,120 @@
+Cleaning Your GOOOP
+
+How to berak oject oriented programming muscle memory and become better Gophers
+
+Applying OOP patterns to Go is less than ideal
+
+OOP
+- grew out of work in MIT in the 50s/60s
+- focuse don systemed based on objects that capture state ahd methods on those objects to modify state
+
+Go is  apracticaly language that doens't reward fancy
+- structs are not classes
+
+closer to C structs than Java or C++ classes
+
+methods are just syntax sugar
+
+constructors are reg functions and are 100% optional
+
+no destructors
+
+- embedding is not inheritance
+
+focus on what things a type can do (has-a) not which kind of thing it is (is-a)
+
+fields and methods on the mebedded type, but are promoted to the outer type
+
+thinking in terms of based classes and derived classes can lead to GOOOP
+
+- packages are the smalest unit of code
+
+all code list in apcakage
+
+visibility is enforced w/in and outside the package
+
+importing the package bring sin the entire package
+
+all consumer refs to symbols include the package name
+
+examples of GOOOP
+
+1. creating seaparate shared components to resolve co-dependency
+
+When A depends on B and B depends on A
+
+- usually you make a third ocmponent C and have the common stuff in there that both A and B use
+- reduces cohesion an dcreate unnecessary coupling
+- often leads to bad module/package names
+- modifying multiple modules at once can be difficult
+
+Signs of GOOOP
+- package names like base, clients, interfaces tha tdoesn't represent functionality
+- packages that only container interfaces and structs with not behavior
+
+2. Declaring interfaces as exported provider abstractions
+
+Interfaces in OOP
+- abc 
+- enumerate the available operations on some type
+- commonlu used as insulation layer between class and user
+
+interfaces in Go
+- define one or more methods that represent some set of behavior
+- satisfied implicitly by any type having the hright methods
+- insulation is "free" - consumer not bound to any implementation
+- simplifies testing
+- eases future development - can satisfy interfaces that don't even exist yet
+
+Signs of GOOOP
+- used the "good" name for the interface
+- implementatoin has an IMpl (or similar) suffix
+- interface redeclares every method
+- there are no refs to the interface in the package that declared it
+
+Architectural patterns
+
+How to structure my project?
+
+Clean Architecture - defined by "Uncle Bob" Martin in 2012
+- clean boundaries
+- combines other patterns with a focus
+- 4 layers 
+	- entities
+	- use cases
+	- interfaces and adapters
+	- Frameworks and drivers
+-deps can only point inward
+
+Model, View, *
+- focus on building UIs
+- common in web apps
+
+Signs of GOOOP
+- packages name dfor things that mirror the pattern layers
+- types are repeated in each package
+- each entity/model change means updating multiple packages
+- manageable in isolation, but rough for cross-project integration
+
+These have stuck around for a reason - they're good. 
+
+(see slide to see how Clean Architecture is done in a more idiomatic way)
+
+there should never be more than one reason for a class to change
+
+we should be able ot provide new behavior without needing ot rewrite existing code 
+
+interfaces should be as narrow a possible - idealy single-method
+
+compose narrower interfaces to combine behaviors
+
+duck typing means consumers aren't stuck
+
+depend on abstractions, not ocncretions.
+
+A great rule of thumb for Go is accept interfces, return structs
+
+definte interfaces for input parameters
+
+
+
