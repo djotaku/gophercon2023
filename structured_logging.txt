@@ -1,0 +1,30 @@
+structures logging
+
+log/slog
+
+structured logging - using key/value pairs in your logging
+
+why make slog package when there are many 3rd party ones? Well, to unify things so they all work the same 
+
+Goals
+- easy to use
+- fast
+- interoperable with other packages
+
+see slide on how you do it - there is text handler and json handler
+
+LogAttrs (is faster) you specify the type (so it doesn't need to do inference) - see slide
+
+Levels 
+- are ints
+- some have names (Debug, Info, Warn, Error)
+- room for your own names
+- info is 0
+
+use groups to make json sub-objects
+
+groups can also help with the issue of conflicting names
+
+the Logger.With - allows you to have something added to everything in that log
+
+
