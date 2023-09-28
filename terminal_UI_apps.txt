@@ -1,0 +1,17 @@
+Terminal UI Apps from the Ground Up with Bubble Tea
+
+@andyhaskell@mastodon.social
+
+Bubble Tea is based on the Elm Architecture
+
+Model is the data of your app
+
+View - what the data looks like to the user
+
+Update - how we handle input
+
+see slides to see how the view is built
+
+Lip Gloss is like CSS for TUIs
+
+
