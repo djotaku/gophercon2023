@@ -1,0 +1,43 @@
+The Blueprints to Building Your Own Badass Community
+
+Go is becoming a global language - community is key
+
+understnading goals is important to help with your motivation and planning
+
+does a community already exist? Get involved rather than just starting a new one?
+
+Are there meetups you can take inspiration from?
+
+planning your event: 
+understand your limitations and manage your expectations
+
+Gather interest from work, friends or othes (aka seeding) - others see at least some people there. (Like when a busker puts dollars in their guitar case)
+
+securing a venue (see slide)
+
+define comms channels ahead of time - what if it gets canceled.  
+
+Make sure you understand the Go communicty code of conduct
+
+what if your first event was a disaster?
+1. review and reflect
+2. 
+3. remember to celebrate - you can still be sad and eat ice cream
+
+what if your first event was good enough to do another?
+1. same as before
+2. streamline processes - you will notice repetition and boilerplate
+3. Try not to give into ego
+
+"Can a tech meetup have Code Smell?" - interesting article to look up
+
+Introduced Priority Queue because they were getting too many potential attendees. They save 20% for underrepresented in tech spots
+
+what if you want out - after one or more events you no longer want to be the organizer
+1. 
+2. it can be hard but know you can leave at any time. Make sure to get those who might want to take over.
+3. Remember to celebrate
+
+
+
+
