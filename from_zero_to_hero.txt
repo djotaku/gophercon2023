@@ -1,0 +1,26 @@
+From Zero to Hero - Implementing a Game in 45 min
+
+author wants more games to be builtin in Go instead of .net
+
+cooperative idle game called "feed the gopher" - compete with friends to see who can feed the gopher the most. Automate a feeding empire to maximize growth
+
+features:
+- leaderboard
+- player chat
+- rate limiting
+
+client:
+single static page HTML
+feed buttom
+leaderboard chatUI
+auto feeder upgrades
+
+see slide for architecture
+
+see slide for endpoints/code layout
+
+leaderboard powered by a sorted set
+
+rate limiter to enforce the rules of the game
+
+
