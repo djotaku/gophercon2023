@@ -1,0 +1,2 @@
+A fascinating talk about vulnerability analysis along the supply chain with govulncheck. It checks your deps (both the ones you listed and the ones they brought in). Then it tells you if you have to worry about a CVE on one of the deps (or deps of deps) based on whether you actually use the function or functionality from the dep where the vulnerability lies.
+
